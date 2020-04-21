@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap-css-only'; 
 
-function App() {
+
+import Header from './components/Header';
+import RollsList from './components/RollsList';
+import Cart from './components/Cart';
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Header />
+      <div className="container mb-5">
+        <div className="row">
+          <RollsList />
+          <div className="col-md-4">
+            <Cart />
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 
